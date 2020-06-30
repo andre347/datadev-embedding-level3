@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://www.w3schools.com/lib/w3-theme-black.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>💻 🦖 Superstore: Executive Overview – Profitability</title>
+    <script src="https://10ax.online.tableau.com/javascripts/api/tableau-2.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Superstore: Executive Overview – Profitability</h1>
+      <p>#DataDev Challenge Level 3 | @andre347_ | The Information Lab</p>
+      <h3>Filters Applied: <span id="filtersApplied"></span></h3>
+      <button id="clearFilterBtn">Clear Filters</button>
+    </header>
+    <main>
+      <p id="filterText">
+        Sales over time are increasing. The
+        <span
+          class="singleValue"
+          data-filterValue="Consumer"
+          data-filterSheet="Sales by Segment"
+          data-filterName="Segment"
+          >consumer</span
+        >
+        segment has the highest sales since 2019. In <span class="dateValue" data-filterValue="2019-9" data-filterSheet="Sales by Segment" data-filterName="Order Date">September 2019</span>, the
+        Consumer’s segment had its highest spike. The
+        <span
+          class="singleValue"
+          data-filterValue="Central"
+          data-filterName="Region"
+          data-filterSheet="Sale Map"
+          >Central</span
+        >
+        Region has the lowest profit ratio, even if they have high sales in Product
+        Category
+        <span
+          class="singleValue"
+          data-filterValue="Furniture"
+          data-filterSheet="Sales by Product"
+          data-filterName="Category"
+          >Furniture</span
+        >. Ten states have a negative profit ratio.
+        <span
+          class="singleValue"
+          data-filterValue="Ohio"
+          data-filterName="State"
+          data-filterSheet="Sale Map"
+          >Ohio</span
+        >
+        is the state with the lowest profit ratio. In 2019,
+        <span
+          class="singleValue"
+          data-filterValue="Colorado"
+          data-filterName="State"
+          data-filterSheet="Sale Map"
+          >Colorado</span
+        >
+        was the state with the lowest ratio. The
+        <span
+          class="singleValue"
+          data-filterValue="Technology"
+          data-filterName="Category"
+          data-filterSheet="Sales by Product"
+          >technology</span
+        >
+        was the product category with the highest sales.
+      </p>
+      <div id="vizContainer"></div>
+    </main>
+
+<!-- This is the modal that pops up when you load the page -->
+      <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modalContent">
+              <p id="modalText">Click on the words in the text that describe elements on the dashboard. This will filter the dashboard to the word you clicked on. Use the 'Clear Filters' button to clear the filters and return to the initial state of the dashboard.</p>
+              <img src="https://res.cloudinary.com/dmim37dbf/image/upload/c_scale,w_486/v1593186744/DataDevChallenge/datadev.gif" alt="instructions">
+            </div>
+        </div>
+    </div
+
+    <!-- load app.js -->
+    <script src="./app.js"></script>
+  </body>
+</html>

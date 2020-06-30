@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  position: relative;
+  outline: none;
+}
+
+html,
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#filterText {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1.2rem;
+  padding-top: 1.2rem;
+  text-align: justify;
+  line-height: 2.6;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+#filterText span {
+  border-radius: 5px;
+  transform: scaleX(0);
+  width: 100%;
+  height: 3px;
+  font-weight: bold;
+}
+
+#filterText span:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: #c15628;
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: 0.25s linear;
+}
+
+#filterText span:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+span:hover {
+  cursor: pointer;
+}
+
+button {
+  border-radius: 10%;
+  padding: 5px;
+  transition: 0.2s linear;
+}
+
+button:hover {
+  background-color: darkgrey;
+  color: white;
+  cursor: pointer;
+}
+
+img {
+  padding-top: 40px;
+}
+
+/* Modal stuff */
+
+#modalContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+#modalText {
+  padding: 1.5rem;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 44rem;
+  border-radius: 0.5rem;
+}
+
+.show-modal {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
